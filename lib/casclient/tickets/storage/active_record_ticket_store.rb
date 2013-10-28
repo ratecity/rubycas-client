@@ -9,6 +9,11 @@ module CASClient
       #
       # This ticket store takes the following config parameters
       # :pgtious_table_name - the name of the table 
+      #
+      # Oddly, we see the following error without this load
+      # `uninitialized constant CASClient::Tickets::Storage::AbstractTicketStore`
+      #
+      load 'casclient/tickets/storage.rb'
       class ActiveRecordTicketStore < AbstractTicketStore
 
         def initialize(config={})
