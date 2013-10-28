@@ -10,6 +10,7 @@ module CASClient
       #
       # This ticket store takes the following config parameters
       # :pgtious_table_name - the name of the table 
+      load 'casclient/tickets/storage.rb'
       class ActiveRecordTicketStore < AbstractTicketStore
 
         def initialize(config={})
